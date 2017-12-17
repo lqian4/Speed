@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col fishtank">
+                <img id="loading" src="bg.png">
+                <img id="fish" src="fish2.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="slidecontainer">
+                    <input type="range" min="0" max="100" value="0" class="slider" id="slider">
+                    <p>Volts: <span id="speed"></span></p>
+                    
+                    <p>Fish:<span id="fish"></span><br>Condition:<span id="cond"></span><br>Direction:<span id="fishdirection"></span></p>
+                    <p><span id="speed"></span></p>
+                    <p><span id="fail"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">Mahi-Mahi</div>
+            <div class="col-sm-10">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+  <button type="button" class="btn btn-success" id = "cont" onClick = "showCond(' Control') ">Control</button>
+  <button type="button" class="btn btn-warning" id = "cond1" onClick = "showCond(' 0.08% Contamination')">0.08% Contamination</button>
+  <button type="button" class="btn btn-danger" id = "cond2"  onClick = "showCond(' 0.2% Contamination')">0.2% Contamination</button>
+
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Direction
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" data-direction="cw" onClick = "showDirection('Clockwise')">Clockwise</a>
+      <a class="dropdown-item" data-direction="ccw" onClick = "showDirection('Counter Clockwise')">Counter Clockwise</a>
+        
+    </div>
+      <input type="reset" value="Reset" onClick="location.href=location.href">
+      
+  </div>
+</div>
+         
+            </div>
+        </div>
+        <div class ="failtainer"></div>    
+    </div>
+</body>
+
+
+
+
+
+<!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+<!--<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
+<script src="main.js"></script>
+
+</html>
